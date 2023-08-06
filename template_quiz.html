@@ -1,0 +1,76 @@
+
+
+    <div class="container my-5" id="content">
+        <div class="row" ng-show="!inProgess">
+            <div class="col text-center">
+                <button class="btn btn-primary" ng-click="start()" >Start the Quiz</button>
+            </div>
+        </div>
+        <br>
+    
+        <div ng-show="inProgess">
+            <div class="row" ng-show="quizOver">
+                <div class="col text-center">
+                    <h3 style="color: rgb(17, 33, 215);">Quiz is Over</h3>
+                    <p>Bài thi của bạn được: {{score}} điểm</p>
+                    <button ng-if='score < 5' ng-click="reset()">Kết quả thi không đạt yêu cầu, vui lòng làm lại!</button>
+                    <button ng-if='score >= 5'>Congratulation! You have passed the exam</button>
+                    <!-- <button class="btn btn-primary" ng-click="reset()">Play again</button> -->
+
+                    <a href="#/!"><button>Exit</button></a>
+                </div>
+            </div>
+            <div ng-show="!quizOver">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 ng-controller="ClockCtrl"><i class="fas fa-clock" style="color: #085190;">{{displayMinutes}} : {{displaySeconds}}</i></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card border-info">
+                            <div class="card-header text-white" style="background-color: #2fdc83;">
+                                <img src="/images/JAAV.png" width="30" class="border border-primary rounded-lg" alt="">
+                                <span>{{subjectsName}}</span>
+                                <span class="float-right badge badge-dark" style="padding: .28em .7em;">{{id}}/10</span>
+                            </div>
+                            <div>
+                                <span class="badge badge-success"
+                                    style="padding: .28em .7em; font-size: 90%; font-weight: 500;">Điểm:
+                                    {{score}}/10</span>
+    
+                            </div>
+    
+                            <div class="card-body">
+    
+                                <div class="card-text" style="font-weight: 500;">
+                                    <label for="">{{question}}</label>
+                                    <hr>
+                                    <div class="form-check" ng-repeat="option in options">
+                                        <label class="form-check-label" for="Radios1">
+                                            <input class="form-check-input" type="radio" name="answer"
+                                                value="{{option.Id}}">
+                                            {{option.Text}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div ng-show="answerMode">
+                                    <button class="btn btn-primary" ng-click="checkAnswer()">Submit</button>
+                                </div>
+                                <div ng-show="!answerMode">
+                                    <button class="btn btn-primary" ng-click="nextQuestion()">Next</button>
+                                    <span ng-show="correcAns" style="color: green;">Correct</span>
+                                    <span ng-show="!correcAns" style="color: red;">Incorrect !</span>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>

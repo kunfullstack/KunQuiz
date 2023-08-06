@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/dangky.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body ng-app="myApp">
+    <div class="row">
+        <div class="container">
+            
+            <form action="" name="frmUpdate">
+                <div class="container">
+                    <h1>Cập nhật tài khoản</h1>
+                    <hr>
+                    <span class="form-text " style="color: DodgerBlue;">Username</span>
+                    <input name="fullname" ng-model="student.fullname" type="text" id="fullname"
+                        class="form-control border-primary" required maxlength="25" autofocus
+                        placeholder="Nhập username ">
+                    <small ng-show="frmUpdate.fullname.$error.required" class="form-text text-danger">Vui lòng nhập họ
+                        tên</small>
+                    <small ng-show="frmUpdate.fullname.$error.maxlength" class="form-text text-danger">Không được quá 25
+                        kí tự</small>
+
+
+                    <span class="form-text" style="color: DodgerBlue;">Email</span>
+                    <input name="email" ng-model="email" type="email" id="email"
+                        class="form-control border-primary" required placeholder="Nhập email ">
+                    <small ng-show="frmUpdate.email.$error.required" class="form-text text-danger">Vui lòng nhập
+                        email</small>
+                    <small ng-show="frmUpdate.email.$error.email" class="form-text text-danger">Không đúng định dạng
+                        email</small>
+
+                    <label class="" for="">Giới
+                        tính:</label>
+                    <div class="form-check form-check-inline">
+                        <input ng-model="gender" type="radio" class="form-check-input" id="gender" name="gender"
+                            value="true">
+                        <label class="form-check-label " for="gender">Nam</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input ng-model="gender" type="radio" class="form-check-input" id="gender2"
+                            name="gender" value="false">
+                        <label class="form-check-label " for="gender2">Nữ</label>
+                    </div>
+
+                    <span class="form-text " style="color: DodgerBlue;">Ngày sinh</span>
+                    <input placeholder="yyyy-mm-dd" name="birthday" ng-model="student.birthday" type="text"
+                        id="birthday" class="form-control border-primary" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                        placeholder="Nhập ngày sinh">
+                    <small ng-show="frmUpdate.birthday.$error.required" class="form-text text-danger">Vui lòng nhập ngày
+                        sinh</small>
+                    <small ng-show="frmUpdate.birthday.$error.pattern" class="form-text text-danger">Không đúng định
+                        dạng ngày</small>
+
+                    <span class="form-text " style="color: DodgerBlue;">Học phí</span>
+                    <input  name="schoolfee" ng-model="schoolfee" type="text" id="schoolfee"
+                        class="form-control border-primary" required placeholder="VNĐ">
+                    <small ng-show="frmUpdate.schoolfee.$error.required" class="form-text text-danger">Vui lòng nhập học
+                        phí</small>
+                    <small ng-show="!frmUpdate.schoolfee.$error.required && frmUpdate.schoolfee.$invalid"
+                        class="form-text text-danger">Học phí phải hơn 2 triệu</small>
+
+                    <span class="form-text" style="color: DodgerBlue;">Điểm</span>
+                    <input placeholder="Nhập điểm" name="mark" ng-model="student.marks" type="text"
+                        class="form-control border-primary" required>
+                    <small ng-show="frmUpdate.mark.$error.required" class="form-text text-danger">Vui lòng nhập điểm</small>
+
+                    <hr>
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn"><strong>Thay đổi</strong></button>
+                    </div>
+
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

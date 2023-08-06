@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box
+}
+.container-fluid > header{
+    width: auto;
+    height: 70px;
+    background-color:rgb(64, 185, 82);
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.container-fluid  header label{
+    padding-top: 20px;
+}
+.container-fluid  header img{
+    padding-top: 10px;
+}
+.container-fluid button{
+    border: 0px;
+    background-color: #ffffff;
+    color: #09dc8d;
+    border-radius: 3px;
+}
+
+/* css phần Nav */
+.container-fluid nav {
+    height: 90px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 20px;
+}
+.container-fluid nav h1{
+    display: inline-block;
+    font-family: cursive;
+    padding-top: 20px;
+}
+.container-fluid nav img{
+    float: left;
+}
+.container-fluid nav{
+    background-color: #ffffff;
+
+}
+
+.container-fluid account{
+    float: left;
+}
+.cus{
+  --color: rgb(64, 185, 82);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  outline: none;
+  font-size: 16px;
+  position: relative;
+  isolation: isolate;
+  
+  margin-left: 5px;
+
+}
+.cus:before {
+  content: "";
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color);
+  z-index: -1;
+  transition: width 0.25s ease-in;
+  border-radius: 3px ;
+}
+.cus:hover:before {
+  width: 100%;
+}
+
+/* css footer */
+.footer-clean {
+    padding:50px 0;
+    background-color:rgb(64, 185, 82);
+    color:#ffffff;
+  }
+  
+  .footer-clean h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:20px;
+  }
+  
+  .footer-clean ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-clean ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-clean ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-clean .item.social {
+    text-align:right;
+  }
+  
+ 

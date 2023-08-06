@@ -1,0 +1,27 @@
+
+  <form action="" name="formFeedback" style="margin-top: 80px;">
+    <div class="container">
+      <h1 style="padding-bottom: 20px; border-bottom: 2px solid rgb(64, 185, 82);">Góp ý</h1>
+      <hr>
+      <label for="username">Username</label>
+      <input type="text" maxlength="25" placeholder="Nhập username" name="username" ng-model="Student.username" required>
+      <small ng-show="formFeedback.username.$error.required" class="form-text text-danger">Vui lòng nhập
+        username</small>
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="Nhập Email" name="email" ng-model="Student.email" required>
+      <small ng-show="formFeedback.email.$error.required" class="form-text text-danger">Vui lòng nhập
+        email</small>
+      <small ng-show="formFeedback.email.$error.email" class="form-text text-danger">Không đúng định dạng
+        email</small>
+
+      <label for="">Ghi chú:</label> <br>
+      <textarea name="notes" id="notes" cols="130" rows="5" style="border: rgb(114, 111, 111);"></textarea>
+
+
+      <div class="clearfix">
+        <button type="submit" class="submit">Gửi</button>
+      </div>
+    </div>
+  </form>
+

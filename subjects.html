@@ -1,0 +1,23 @@
+<div class="container " id="content" style="margin-top: 80px;">
+    <div class="subjects">
+        <div class="spacer"></div>
+        <h2 style="padding-bottom: 20px; border-bottom: 2px solid rgb(64, 185, 82); color: green;">Môn học</h2>
+    </div>
+    <div class="row" style="padding: 20px;">
+        <div class="col-4 subjects-item" style="padding: 20px;" ng-repeat="item in listSubject">
+            <div class="subjects-item-image">
+                <img src="./images/{{item.Logo}}" width="130px">
+            </div>
+            <div class="subjects-item-text">
+                <div class="subjects-item-text-main">
+                    <div>
+                        <div>{{item.Name}}</div> 
+                        <div class="subjects-item-title-subtext">Test online - Chắc kiến thức, vững tương lai</div>
+                    </div>
+                    <a class="btn btn-primary" style="margin-top: 20px;" href="#!quiz/{{item.Id}}/{{item.Name}}" role="button">Thi ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>

@@ -1,0 +1,43 @@
+{
+  "listStudent": [
+    {
+      "username": "teonv",
+      "password": "111111",
+      "fullname": "Nguyễn Văn Tèo",
+      "email": "teonv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "1995-12-21",
+      "schoolfee": "1500000",
+      "marks": "0",
+      "id": 1
+    },
+    {
+      "username": "teonp",
+      "password": "123123",
+      "fullname": "nguyen phong teo",
+      "email": "abc@gmail.com",
+      "gender": "true",
+      "birthday": "2001-01-09",
+      "schoolfee": 2000000,
+      "id": 2
+    },
+    {
+      "username": "thai",
+      "password": "123456",
+      "fullname": "thaipham",
+      "email": "thai@gmail.com",
+      "gender": "true",
+      "birthday": "2003-12-12",
+      "id": 3
+    },
+    {
+      "username": "haha",
+      "password": "111111",
+      "fullname": "haha",
+      "email": "hahahaha@gmail.com",
+      "gender": "true",
+      "birthday": "2003-12-12",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+
+
+    <div class="row" ng-controller="loginCtrl">
+        <div class="container">
+            <form action="" name="formLogin">
+                <h1>Đăng nhập</h1>
+                <hr>
+                <label for="exampleInputUsername">Username</label>
+                <input ng-model="fullname" type="text" class="form-control" name="username" id="exampleInputUsername"
+                    aria-describedby="usernameHelp" required placeholder="Nhập username ">
+                <small ng-show="formLogin.username.$error.required" class="form-text text-danger">Vui lòng nhập username
+                </small>
+
+                <label for="exampleInputPassword1">Mật khẩu</label>
+                <input ng-model="password" check-password type="password" class="form-control" name="password"
+                    id="exampleInputPassword1" aria-describedby="passHelp" required placeholder="Nhập mật khẩu ">
+                <small ng-show="formLogin.username.$error.required" class="form-text text-danger">Vui lòng nhập password
+                </small>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ Đăng Nhập
+                </label>
+                <hr>
+
+                <span class="text-right px-3"><a class="text-decoration-none" href="#!dangky"
+                        style="color: rgb(20, 215, 46);">Đăng ký </a></span>
+                <span class="text-right px-3"><a class="text-decoration-none" href="#!quenmatkhau"
+                        style="color: rgb(20, 215, 46);">Quên mật khẩu </a></span>
+
+                <button type="submit" class="loginbtn" ng-click="login()"><strong>Đăng
+                        nhập</strong></button>
+
+
+            </form>
+
+
+        </div>
+    </div>

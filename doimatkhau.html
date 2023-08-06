@@ -1,0 +1,44 @@
+
+    <div class="row mx-auto">
+        <div class="container">
+            <form  name="changePass">
+                <div class="container">
+                    <h1>Đổi mật khẩu</h1>
+                    <hr>
+                    <label class="bg-white deep-purple-text rounded" for="oldpassword">Mật khẩu
+                            cũ</label>
+                    <input minlength="6" name="oldpassword" ng-model="oldpassword" type="password" id="oldpassword"
+                        class="form-control border-primary" required placeholder="Nhập mật khẩu cũ">
+                    <small ng-show="changePass.oldpassword.$error.required" id="oldpassword"
+                        class="form-text text-danger">Vui lòng nhập mật khẩu cũ</small>
+                    <small ng-show="changePass.oldpassword.$error.minlength" id="oldpassword"
+                        class="form-text text-danger">Mật khẩu không đúng</small>
+
+                    <label class="bg-white deep-purple-text rounded " for="password">Mật khẩu
+                            mới</label>
+                    <input minlength="6" name="password" ng-model="newPassword" type="password" id="password"
+                        class="form-control border-primary" required placeholder="Nhập mật khẩu mới">
+                    <small ng-show="changePass.password.$error.required" id="password"
+                        class="form-text text-danger">Vui lòng nhập mật khẩu mới</small>
+                    <small ng-show="changePass.password.$error.minlength" id="password"
+                        class="form-text text-danger">Mật khẩu phải hơn 6 kí tự</small>
+
+                    <label class="bg-white deep-purple-text rounded " for="renewpassword">Mật khẩu mới
+                            (nhập lại)</label>
+                    <input name="renewpassword" ng-model="confirPassword" type="password" id="renewpassword"
+                        class="form-control border-primary" required re-pass placeholder="Nhập lại mật khẩu mới">
+                    <small ng-show="changePass.renewpassword.$error.required" id="renewpassword1"
+                        class="form-text text-danger">Vui lòng nhập lại mật khẩu</small>
+                    <small ng-show="changePass.renewpassword.$invalid && !frmChangPass.renewpassword.$error.required"
+                        id="renewpassword2" class="form-text text-danger">Mật khẩu nhập lại không khớp</small>
+
+                    <div class="clearfix">
+                        <button  ng-click="changePassf()" class="signupbtn">Cập nhật</button>
+                    </div>
+
+                </div>
+            </form>
+
+        
+        </div>
+    </div>
